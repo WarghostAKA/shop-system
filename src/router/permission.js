@@ -1,6 +1,6 @@
-import router from "./";
-import useToken from "../stores/token";
-import notification from "../utils/notification";
+import router from './'
+import useToken from '../stores/token'
+import notification from '../utils/notification'
 
 const whiteList = ['/login']
 
@@ -9,13 +9,11 @@ router.beforeEach((to, from, next) => {
 	const { token } = useToken()
 	if(token) {
 		next()
-
 	} else {
-		if (whiteList.includes(to.path)) {
+		if(whiteList.includes(to.path)) {
 			next()
-
 		} else {
-			notification ({
+			notification({
 				message: '请先登录',
 				type: 'error'
 			})
