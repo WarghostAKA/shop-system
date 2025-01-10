@@ -1,6 +1,6 @@
 
-import { defineStore } from "pinia";
-import { reactive } from "vue";
+import { defineStore } from "pinia"
+import { reactive } from "vue"
 
 const useAdmin = defineStore('admin', () => {
 	const defaultAdmin = {
@@ -23,7 +23,7 @@ const useAdmin = defineStore('admin', () => {
 
 }, {
 	persist: {
-		ebabled: true,
+		enabled: true,
 		strategies: [
 			{
 				key: 'admin',
@@ -32,5 +32,4 @@ const useAdmin = defineStore('admin', () => {
 		]
 	}
 })
-
 export default useAdmin

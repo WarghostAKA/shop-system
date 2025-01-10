@@ -13,7 +13,7 @@ const service = axios.create({ baseURL })
 
 service.interceptors.request.use(config => {
 	loadingInstance = ElLoading.service()
-	const { token } = useToken
+	const { token } = useToken()
 	if(token) {
 		config.headers.jwt = token
 	}

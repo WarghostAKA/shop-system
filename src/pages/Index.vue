@@ -1,5 +1,5 @@
 <template>
-	<div class="common-layout">
+	<div class="common-layout" >
 		<el-container>
 			<el-header>
 				<Header></Header>
@@ -8,10 +8,8 @@
 				<el-aside>
 					<Aside></Aside>
 				</el-aside>
-			
 				<el-main>
 					<el-card class="box-card">
-
 						<router-view></router-view>
 					</el-card>
 				</el-main>
@@ -25,6 +23,7 @@ import Header from '../components/Header.vue'
 import Aside from '../components/Aside.vue'
 
 </script>
+
 
 <style lang="scss" scoped>
 .el-container {
@@ -50,4 +49,5 @@ import Aside from '../components/Aside.vue'
 		color: #333;
 	}
 }
+
 </style>
